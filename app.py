@@ -497,7 +497,7 @@ st.header("6️⃣ Monthly Sales & Profit Trend")
 monthly = (
     filtered_df
     .set_index("Order Date")
-    .resample("M")
+    .resample("ME")
     .agg(
         Sales=("Sales", "sum"),
         Gross_Profit=("Gross Profit", "sum")
